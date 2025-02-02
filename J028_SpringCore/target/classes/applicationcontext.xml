@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="com.Student" name="std" autowire="byType">
+
+		<property name="id" value="1" />
+		<property name="name" value="Ram" />
+		<property name="email" value="ram@gmail.com" />
+		<property name="subjects">
+			<list>
+				<value>Java</value>
+				<value>Php</value>
+				<value>Python</value>
+
+			</list>
+
+		</property>
+		<property name="lang">
+			<set>
+				<value>Gujrati</value>
+				<value>Marathi</value>
+				<value>English</value>
+
+			</set>
+
+		</property>
+
+	</bean>
+
+	<bean class="com.Address" name="adr">
+
+		<property name="city" value="Surat" />
+		<property name="state" value="Gujrat" />
+		<property name="country" value="India" />
+
+	</bean>
+
+	<bean name="acc1" class="com.Account">
+
+		<property name="bankName" value="Bank Of India" />
+		<property name="accountName" value="Ram" />
+		<property name="accountNumber" value="1123456" />
+	</bean>
+	<bean name="acc2" class="com.Account">
+
+		<property name="bankName" value="Bank Of Baroda" />
+		<property name="accountName" value="Ram" />
+		<property name="accountNumber" value="1123456" />
+	</bean>
+
+
+	<bean class="com.Question" name="que" autowire="byType">
+
+		<property name="question" value="What is Spring?" />
+	</bean>
+
+	<bean class="com.Answer" name="ans">
+
+		<property name="ans"
+			value="Spring is a powerful, lightweight, and widely used framework for building enterprise Java applications" />
+	</bean>
+
+	<bean class="com.Answer" name="ans1">
+
+		<property name="ans"
+			value="It simplifies Java development by providing comprehensive infrastructure support for modern applications, including web applications, microservices, cloud-based systems, and more." />
+	</bean>
+</beans>
